@@ -1,0 +1,35 @@
+:root {
+  --devPost-color: #8cb57b;
+  
+}
+
+.postBox{
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--devPost-color);
+}
+
+.postText{
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+#devPostTitle{
+    margin-left: 5px;
+    margin-bottom:2px;
+}
+
+.devPostButton{
+    margin-left: 300px;
+    margin-bottom: 5px;
+    background-color: #7bb365;
+    padding: 5px 5px 5px 5px;
+    
+}
+
+.devPostImg{
+    margin-left: 20px;
+}
+
+

@@ -1,0 +1,19 @@
+.postBut{
+    display:flex;
+    justify-content: end;
+}
+
+.radioSelect{
+    
+    font-size: 25px;
+}
+
+.radioSelect ul {
+display:flex;
+justify-content: space-between;
+}
+#pfeil{
+    display:flex;
+    justify-content: center;
+    font-size: 25px;
+}

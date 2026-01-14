@@ -1,0 +1,143 @@
+:root {
+  --main-color: #f1daca;
+  --headings-color: black;
+  --text-color: #343231;
+  --devPost-color: #8cb57b;
+  
+}
+
+h1{
+font-size: 40px;
+color: var(--headings-color);
+}
+
+h2{
+font-size: 30px;
+color: var(--headings-color);
+}
+
+h3{
+font-size: 25px;
+color: var(--headings-color);
+}
+
+h4{
+font-size: 25px;
+color: var(--headings-color);
+}
+
+h5{
+font-size: 23px;
+color: var(--headings-color);
+}
+
+h6{
+font-size: 20px;
+color: var(--headings-color);
+}
+p{
+    font-size: 18px;
+    color: var(--text-color);
+}
+body{
+    background-color: var(--main-color);
+    padding-bottom: 80px;
+    padding-top: 110px;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+button{
+    background-color: #7bb365 ;
+     
+    
+    border-radius: 10px;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        opacity 0.15s ease;
+}
+button:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+
+label{
+    font-size: 20px;
+}
+select{
+    font-size:20px;
+}
+input{
+    font-size:18px;
+}
+input[type="radio"] {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="text"]{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inputFields{
+    display: flex;
+    align-items: center;
+    
+    
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+}
+.inputFields label{
+    min-width: 150px;
+}
+.inputFields select{
+    width: 100px;
+}
+.inputFields input[type="text"]{
+    width: 90px;
+}
+.buttonBig{
+    background-color: var(--devPost-color) ;
+    font-size: large;
+}

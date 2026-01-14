@@ -1,0 +1,41 @@
+:root {
+  --main-color: #f1daca;
+  --headings-color: black;
+  --text-color: #343231;
+  --devPost-color: #8cb57b;
+
+}
+.bar{
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 10px 0;
+  border-top: 1px solid black;
+    font-size: 35px;
+    display: flex;
+  gap: 12px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  list-style: none;
+}
+
+.bar li{
+    border: 1px solid black;
+    border-radius: 10%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: var(--devPost-color);
+}
+
+.bar a{
+    text-decoration: none;
+}
+.bar :hover{
+    background-color: #475c3e;
+}

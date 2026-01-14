@@ -5,10 +5,9 @@ import Header from "../../components/Shop/Header.js";
 import ProductGrid from "../../components/Shop/ProductGrid.js";
 
 const htmlTemplate = /*html*/`
-
-
-  <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
-    <h2 style="color: #2c5530; margin-bottom: 1.5rem;">Discover Your Perfect Beverage</h2>
+ 
+  <main style=" max-width: 1200px; margin: 0 auto;">
+    <h2 style="color: #2c5530; margin-bottom: 1.5rem;">Shop: Discover Your Perfect Beverage</h2>
 
     <!-- Search box -->
     <div style="margin-bottom: 1.5rem;">
@@ -44,10 +43,10 @@ const htmlTemplate = /*html*/`
 
     <!-- Filter buttons -->
     <div style="margin-bottom: 2rem; display: flex; gap: 1rem;">
-      <button onclick="/* show all products JS */" style="...">Show All</button>
-      <button onclick="/* show tea JS */" style="...">Show Tea 🍵</button>
-      <button onclick="/* show coffee JS */" style="...">Show Coffee ☕</button>
-      <button onclick="/* show other JS */" style="...">Show other 🥤</button>
+      <button  @click="showAllProd" >Show All</button>
+      <button @click="showTea" >Show Tea 🍵</button>
+      <button @click="showCoffee" >Show Coffee ☕</button>
+      <button @click="showOther" >Show other 🥤</button>
     </div>
 
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
@@ -66,5 +65,28 @@ const htmlTemplate = /*html*/`
 
 export default {
   template: htmlTemplate,
-  components: { Header, ProductGrid , NavBar, TopBar, NavMenu }
-};
+  components: { Header, ProductGrid , NavBar, TopBar, NavMenu },
+  methods: {
+showAllProd(){
+  const cards = document.querySelectorAll('.product-card');
+  cards.forEach(card => {
+    card.style.display = 'block';
+  });
+},
+showTea(){
+  const cards = document.querySelectorAll('.product-card');
+  cards.forEach(card => { const emoji = card.querySelector('div').textContent; if (emoji.includes('🍵')) { card.style.display = 'block'; } else { card.style.display = 'none'; } });
+},
+showCoffee(){
+  const cards = document.querySelectorAll('.product-card');
+  cards.forEach(card => { const emoji = card.querySelector('div').textContent; if (emoji.includes('☕')) { card.style.display = 'block'; } else { card.style.display = 'none'; } });
+  },
+showOther(){
+  const cards = document.querySelectorAll('.product-card');
+   cards.forEach(card => { const emoji = card.querySelector('div').textContent; if (emoji.includes('🥤')) { card.style.display = 'block'; } else { card.style.display = 'none'; } });
+}
+
+
+
+}
+}

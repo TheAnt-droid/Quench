@@ -14,9 +14,9 @@ const htmlTemplate = /*html*/`
     <li><input type=radio value="Text Post" :checked="PostType === 'Text Post'"@click="toggleTrack('Text Post')"aria-label="Post Type:"> Text Post </li>
 </ul>
 
-<ul id="pfeil">
+<p id="pfeil">
   ⬇️
-</ul>
+</p>
 
 <ul>
   <li><input type=radio value="Tea" :checked="DrinkType === 'Tea'" @click="toggleType('Tea')" aria-label="DrinkType:"> Tea </li>

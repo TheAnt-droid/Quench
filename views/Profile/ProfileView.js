@@ -1,5 +1,4 @@
 import editProfilePop from "../../components/EditProfile/editProfilePop.js";
-import Header from "../../components/Shop/Header.js";
 import postReadBox from "../../components/Posts/ReadPost/PostReadBox.js";
 import dataService from "../../service/dataService.js";
 const KEY_USER_PROFILE = "KEY_USER_PROFILE";
@@ -56,6 +55,6 @@ export default {
       }
     },
   template: htmlTemplate,
-  components: { Header, postReadBox, editProfilePop, dataService },
+  components: { postReadBox, editProfilePop, dataService },
   
 };

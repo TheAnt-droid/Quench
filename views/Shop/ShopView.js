@@ -1,7 +1,7 @@
 import NavBar from "../../components/Navigation/NavBar.js";
 import TopBar from "../../components/Navigation/TopBar.js";
 import NavMenu from "../../components/Navigation/NavMenu.js";
-import Header from "../../components/Shop/Header.js";
+
 import ProductGrid from "../../components/Shop/ProductGrid.js";
 
 const htmlTemplate = /*html*/`
@@ -65,7 +65,7 @@ const htmlTemplate = /*html*/`
 
 export default {
   template: htmlTemplate,
-  components: { Header, ProductGrid , NavBar, TopBar, NavMenu },
+  components: { ProductGrid , NavBar, TopBar, NavMenu },
   methods: {
 showAllProd(){
   const cards = document.querySelectorAll('.product-card');

@@ -7,7 +7,7 @@ export default {
   template: /*html*/`
   
     <article>
-      <h3>{{ gem.name }}</h3>
+      <h2>{{ gem.name }}</h2>
       <p>Type: {{ gem.type }}</p>
       <p>Location: {{ gem.city }}, {{ gem.country }}</p>
       <p v-if="gem.note && gem.note.trim().length > 0">

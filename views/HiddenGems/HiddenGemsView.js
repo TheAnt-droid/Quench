@@ -3,7 +3,7 @@ import TopBar from "../../components/Navigation/TopBar.js";
 import NavMenu from "../../components/Navigation/NavMenu.js";
 
 import HiddenGemCard from "../../components/HiddenGems/HiddenGemCard.js";
-import dataService from "../../../../service/dataService.js";
+import dataService from "../../service/dataService.js";
 
 const STORAGE_KEY = "quench_hidden_gems";
 

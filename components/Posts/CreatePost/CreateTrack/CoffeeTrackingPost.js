@@ -123,7 +123,7 @@ export default {
          this.posts.push(this.teaTrackingData);
          dataService.save(KEY_TEA_TRACKING_DATA, this.posts);
          setTimeout(() => {
-          window.location.href="/#/following";
+          window.location.href="./#/following";
           }, 100);
        }
        }

@@ -8,8 +8,8 @@
         <label for="search" style="font-size:18px; margin-right:5px"> Search Bar </label>
         <input type="text" id="search" name="query" placeholder="Search..." v-model="query"style="font-size:18px ; width:100px" > 
         <button @click="Search" aria-label="Start Search. Click to search." aria-hidden="true"style="font-size:17px ; width:40px; height:30px; margin-right:5px"> 🔍 </button>
-        <router-link to="/settings" aria-label="Settings. Click to open." aria-hidden="true"style="font-size:25px">⚙️</router-link>
-        <router-link to="/profile" aria-label="Profile. Click to open." aria-hidden="true"style="font-size:25px">🧝</router-link>
+        <router-link to="/settings" aria-label="Settings. Click to open." aria-hidden="true"style="font-size:25px; text-decoration:none ">⚙️</router-link>
+        <router-link to="/profile" aria-label="Profile. Click to open." style="font-size:25px; text-decoration:none ">👤</router-link>
 </div>
         <NavMenu/>
         

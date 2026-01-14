@@ -14,6 +14,7 @@ import SearchView from './views/HomeScreen/SearchView.js';
 import Country2View from './views/Countries/Country2View.js';
 
 
+
 const routes = [
   { path: '/', component: HomeView },
   { path: '/profile', component: ProfileView },

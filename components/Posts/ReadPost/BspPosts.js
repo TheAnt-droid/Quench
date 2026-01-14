@@ -81,10 +81,10 @@ export default {
     }
   },
    created() {
-    // 🔹 Followed IDs laden
+   
     const followedIds = dataService.get(KEY_FOLLOWED_TRENDING) || [];
 
-    // 🔹 Posts markieren
+   
     this.trendingPosts.forEach(post => {
       post.isFollowed = followedIds.includes(post.id);
     });

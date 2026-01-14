@@ -6,9 +6,9 @@ const htmlTemplate = /*html*/`
 
 <button @click="clearCustom()">DevButton: Clear Custom Posts </button>
 
-<ul class="postBox"> 
+<ul > 
   
-  <li v-for="customPost of customPosts.slice().reverse()">
+  <li class="postBox" v-for="customPost of customPosts.slice().reverse()">
     <h2>{{ customPost.Title }}</h2>
     <PostReadText :customPost="customPost" />
     

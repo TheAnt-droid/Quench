@@ -18,8 +18,8 @@ const htmlTemplate = /*html*/`
       <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
         <div style="font-size: 3rem;">👤</div>
         <div>
-          <h3 style="margin: 0 0 0.5rem 0; color: #2c5530;">Hanem Megahed</h3>
-          <p style="margin: 0; color: #666;">Tea & Coffee Connoisseur</p>
+          <h3 style="margin: 0 0 0.5rem 0; color: #2c5530;">UserName</h3>
+          <p style="margin: 0; color: #666;">UserBio</p>
         </div>
       </div>
 

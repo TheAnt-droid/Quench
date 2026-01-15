@@ -29,12 +29,13 @@ const products = [
 
 const htmlTemplate = /*html*/`
 <div class="grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-
+<ul>
 <div v-for="p in products" :key="p.name" class="product-card" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
-     
+<li>     
 <div style="font-size: 40px; margin-bottom: 10px;">
       {{ p.type === "tea" ? "🍵" : p.type === "coffee" ? "☕" : "🥤" }}
     </div>
+    
     <h4 style="margin: 10px 0;">{{ p.name }}</h4>
     <p style="font-weight: bold; margin: 0;">{{ p.price }}</p>
     <p style="font-size: 14px; color: #555;">{{ p.description }}</p>
@@ -45,7 +46,10 @@ const htmlTemplate = /*html*/`
     
     <ShopDetails :details="p.details"/>
     <ProductCard /> 
+
   </div>
+</li>
+  </ul>
 </div>
 `;
 

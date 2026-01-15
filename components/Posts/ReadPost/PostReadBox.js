@@ -9,7 +9,7 @@ const htmlTemplate = /*html*/`
 <ul > 
   
   <li class="postBox" v-for="customPost of customPosts.slice().reverse()">
-    <h2>{{ customPost.Title }}</h2>
+    <h3>{{ customPost.Title }}</h3>
     <PostReadText :customPost="customPost" />
     
     

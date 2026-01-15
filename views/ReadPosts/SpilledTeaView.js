@@ -7,7 +7,7 @@ import FYPSelection from "../../components/Posts/ReadPost/FYPSelection.js";
 const htmlTemplate = /*html*/`
 
 <div>
-   <h1> Spilled Tea - Trending </h1>
+   <h2> Spilled Tea - Trending </h2>
     <FYPSelection />
     <BspPosts />
     

@@ -132,10 +132,10 @@ input[type="text"]{
     min-width: 150px;
 }
 .inputFields select{
-    width: 100px;
+    width: 120px;
 }
 .inputFields input[type="text"]{
-    width: 90px;
+    width: 125px;
 }
 .buttonBig{
     background-color: var(--devPost-color) ;
@@ -232,3 +232,13 @@ input[type="text"]{
   text-align: center;
 }
 
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

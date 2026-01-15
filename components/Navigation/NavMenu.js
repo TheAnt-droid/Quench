@@ -1,10 +1,12 @@
 const htmlTemplate = /*html*/`
 <div class="burger-container">
-  <button class="burger-btn" @click="Toggle" aria-label="Navigation Menu. Click to open"> ☰ </button>
+  <div ><button class="burger-btn" @click="Toggle" aria-label="Navigation Menu. Click to open"> ☰ </button></div>
   <div class="menu-overlay" v-if="showMenu" @click="CloseMenu">
 
   <nav class="burger-menu" :class="{ open: showMenu }">
-    <ul><h2 id="menuTitle"> Menu </h2>
+   <div> <h2 id="menuTitle" > Menu </h2> </div>
+   <p  class="visuallyHidden">"Click again to close."</p>
+    <ul>
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/profile">Profile</router-link></li>
       <li><router-link to="/countries">Countries</router-link></li>

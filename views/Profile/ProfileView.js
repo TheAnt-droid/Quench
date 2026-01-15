@@ -51,10 +51,20 @@ const htmlTemplate = /*html*/`
 export default {
   data() {
       return {
-        userInfo: dataService.get(KEY_USER_PROFILE) || [],
+        userInfo: {
+        username: "",
+        title: "",
+        bio: ""
+      }
       }
     },
   template: htmlTemplate,
   components: { postReadBox, editProfilePop, dataService },
-  
+  mounted(){
+     const storedProfile = dataService.get(KEY_USER_PROFILE);
+
+    if (storedProfile) {
+      this.userInfo = storedProfile;
+    }
+  }
 };

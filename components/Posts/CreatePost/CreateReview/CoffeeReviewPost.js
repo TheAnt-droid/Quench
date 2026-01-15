@@ -10,9 +10,10 @@ const htmlTemplate = /*html*/`
 <li class= "inputFields"><label for="Type" > Type of Coffee* </label>
 <select aria-label="Type of Coffee, Required" id="Type" name="Type" v-model="teaTrackingData.Type">
    <option value="Arabica Coffee">Arabica</option>
-    <option value="Coffy1 Coffee">Coffy1</option>
-    <option value="Coffy2 Coffee">Coffy2</option>
-    <option value="Coffy3 Coffee">Coffy3</option>
+    <option value="Robusta Coffee">Robusta</option>
+    <option value="Liberica Coffee">Liberica</option>
+    <option value="Excelsa Coffee">Excelsa</option>
+    <option value="Other Coffee">Other</option>
 </select>
 </li>
 <li class= "inputFields">

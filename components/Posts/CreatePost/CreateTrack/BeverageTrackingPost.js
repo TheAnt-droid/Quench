@@ -13,6 +13,7 @@ const htmlTemplate = /*html*/`
     <option value="Soda">Soda</option>
     <option value="Alkohol">Alcohol</option>
     <option value="Juice">Juice</option>
+    <option value="Other">Other</option>
   </select>
 </li>
 <li class= "inputFields"><label for="brand"> Brand </label>

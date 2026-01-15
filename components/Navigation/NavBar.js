@@ -5,7 +5,7 @@ const htmlTemplate = /*html*/`
     <ul class="bar">
       <li>
         <router-link to="/hiddenGems" >
-          <span aria-hidden=true >⭐</span>
+          <span aria-hidden=true >💎</span>
           <span class=visuallyHidden >Hidden Gems. Click to open</span>
         </router-link>
       </li>

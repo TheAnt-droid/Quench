@@ -11,7 +11,11 @@ const htmlTemplate = /*html*/`
     <option value="Green Tea">Green Tea</option>
     <option value="White Tea">White Tea</option>
     <option value="Black Tea">Black Tea</option>
+    <option value="Fruit Tea">Fruit Tea</option>
+    <option value="Oolong Tea">Oolong Tea</option>
+    <option value="Yellow Tea">Yellow Tea</option>
     <option value="Herbal Tea">Herbal Tea</option>
+    <option value="Other Tea">Other Tea</option>
 </select>
 </li>
 <li class= "inputFields"><label for="brand"> Brand </label>

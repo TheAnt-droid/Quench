@@ -3,14 +3,14 @@ const htmlTemplate = /*html*/`
 
 <h2 v-if="DrinkType"> Text Post about {{DrinkType}} </h2>
 <h3> Post Title* </h3>
-<input type="text" id="title" name="title" placeholder="Post Title..." v-model="teaTrackingData.Title"/>
-<br />
-<h3><label for="textArea"> Whats on your mind? </label></h3>
-<input type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/>
-<br />
-<button @click="confirm()"class="buttonBig"> Post </button>
+<input aria-label="Post Title, Required" type="text" id="title" name="title" placeholder="Post Title..." v-model="teaTrackingData.Title"/>
 
-</div>
+<h3><label for="textArea"> Whats on your mind? </label></h3>
+<div><input type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/></div>
+
+<button aria-label="Post Button. Click to post!" @click="confirm()"class="buttonBig"> Post </button>
+
+
 `
 const KEY_TEA_TRACKING_DATA = "KEY_TEA_TRACKING_DATA";
 export default {

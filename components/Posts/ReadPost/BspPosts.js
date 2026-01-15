@@ -12,7 +12,7 @@ const htmlTemplate = /*html*/`
 <ul >
    <li v-for="post of trendingPosts" :key="post.id">
    <div class="postBox"> 
-   <h2>{{ post.Title }}</h2>
+   <h3>{{ post.Title }}</h3>
     
    <p>
   <strong v-if="post.Type"> Type: </strong> <span v-if="post.Type">{{ post.Type }}</span>

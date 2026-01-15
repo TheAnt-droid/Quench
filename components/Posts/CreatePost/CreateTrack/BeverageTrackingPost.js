@@ -3,12 +3,12 @@ const htmlTemplate = /*html*/`
 
 <div>
 <h3> Post Title* </h3>
-<input type="text" id="title" name="title" placeholder="Post Title..." v-model="teaTrackingData.Title"/>
-<br />
+<input aria-label="Post Title, Required" type="text" id="title" name="title" placeholder="Post Title..." v-model="teaTrackingData.Title"/>
+
 <ul><h3> Beverage Tracking Details </h3>
 
-<li class= "inputFields"><label for="Type"> Type of Beverage* </label>
-  <select id="Type" name="Type" v-model="teaTrackingData.Type">
+<li class= "inputFields"><label for="Type" > Type of Beverage* </label>
+  <select aria-label="Type of Beverage, Required" id="Type" name="Type" v-model="teaTrackingData.Type">
     <option value="Water">Water</option>
     <option value="Soda">Soda</option>
     <option value="Alkohol">Alcohol</option>
@@ -32,8 +32,8 @@ const htmlTemplate = /*html*/`
 <ul><h3> Details </h3>
 
  <li class= "inputFields"><label for="Temp"> Temperature </label>
-    <input type="text" id="Temp" name="Temp" placeholder="e.g. 60°C" size="5" v-model="teaTrackingData.Temperature">
-    <select id="TempUnit" name="TempUnit" v-model="teaTrackingData.TempUnit" default="°C">
+    <input type="text" id="Temp" name="Temp" placeholder="Example 60°C" size="5" v-model="teaTrackingData.Temperature">
+    <select id="TempUnit" name="TempUnit" v-model="teaTrackingData.TempUnit" default="°C" aria-label="Select Unit">
         <option value="°C">°C</option>
         <option value="°F">°F</option>
     </select>
@@ -46,28 +46,28 @@ const htmlTemplate = /*html*/`
 </li>
 
 <li class= "inputFields"><label for ="Water"> Liquid Amount </label>
-    <input type="text" id="Water" name="Water" placeholder="e.g. 250ml" size="5" v-model="teaTrackingData.Water"> 
-    <select id="WaterUnit" name="WaterUnit" v-model="teaTrackingData.WaterUnit" default="ml">
+    <input type="text" id="Water" name="Water" placeholder="Example 250ml" size="5" v-model="teaTrackingData.Water"> 
+    <select id="WaterUnit" name="WaterUnit" v-model="teaTrackingData.WaterUnit" default="ml" aria-label="Select Unit">
         <option value="ml">ml</option>
         <option value="cups">cups</option>
     </select>
 </li>
 </ul>
-<br />
+
 <ul><h3> Time Details </h3>
 
 <li class= "inputFields"><label for="Date"> Date </label>
     <input type="date" id="Date" name="Date" v-model="teaTrackingData.Date" >
 </li>
-<li>
-<label for="Time"> Time </label>
+<li class= "inputFields">
+<label  for="Time"> Time </label>
     <input type="time" id="Time" name="Time" v-model="teaTrackingData.Time" >
 </li>
 </ul>
-<br />
-<input type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/>
-<br />
-<button @click="confirm()"class="buttonBig"> Post </button>
+
+<div><input type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/></div>
+
+<button aria-label="Post Button. Click to post!" @click="confirm()"class="buttonBig"> Post </button>
 
 </div>
 `

@@ -11,11 +11,7 @@ const htmlTemplate = /*html*/`
       <Auskunftstext :devPost="devPost" />
       <Auskunftsbild :devPost="devPost"/>
 
-      <button 
-        :aria-label="'Learn more about ' + devPost.title"
-      class=devPostButton>
-        Learn More
-      </button>
+      <div><button :aria-label="'Learn more about ' + devPost.title + 'Currently no link'" class=devPostButton> Learn More</button></div>
     </article>
   </li>
 </ul>
@@ -36,7 +32,7 @@ export default {
         {
           title: "Green Tea: Health Benefits", 
           text: "Green tea is packed with antioxidants and can help improve focus. It supports the immune system and has a calming effect.", 
-          img: "public/resources/D84.jpg" , alt: "Bild 1", width: "150", height: "100" },
+          img: "public/resources/D84.jpg" , alt: "Image displaying a dagger", width: "150", height: "100" },
         { title: "Black Tea: The Perfect Morning Ritual", 
           text: "Black tea contains caffeine and polyphenols that boost alertness. Perfect to start your day or enjoy a relaxing break.", 
           img: "" , alt: "", width: "", height: "" },

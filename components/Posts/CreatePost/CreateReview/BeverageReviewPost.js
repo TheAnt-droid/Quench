@@ -3,12 +3,12 @@ const KEY_TEA_TRACKING_DATA = "KEY_TEA_TRACKING_DATA";
 const htmlTemplate = /*html*/`
 
 <div>
-<h3> Post Title* </h3>
-<input type="text" id="title" name="title" placeholder="Post Title..." v-model="teaTrackingData.Title"/>
-<br />
-<ul><h3> Beverage Tracking Details </h3>
-<li class= "inputFields"><label for="Type"> Type of Beverage* </label>
-<select id="Type" name="Type" v-model="teaTrackingData.Type">
+<h3 > Post Title* </h3>
+<input aria-label="Post Title, Required" type="text" id="title" name="title" placeholder="Post Title..." v-model="teaTrackingData.Title"/>
+
+<ul><h3> Beverage Review Details </h3>
+<li class= "inputFields"><label for="Type" > Type of Beverage* </label>
+<select aria-label="Type of Beverage, Required" id="Type" name="Type" v-model="teaTrackingData.Type" >
     <option value="Water">Water</option>
     <option value="Soda">Soda</option>
     <option value="Alkohol">Alcohol</option>
@@ -16,7 +16,7 @@ const htmlTemplate = /*html*/`
 </select>
 </li>
 <li class= "inputFields">
-<label for="brand"> Brand </label>
+<label for="brand" aria-label="Select Brand"> Brand </label>
 <input type="text" id="brand" name="brand" placeholder="Brand..." size="6" v-model="teaTrackingData.Brand">
 </li>
 <li class= "inputFields">
@@ -27,32 +27,32 @@ const htmlTemplate = /*html*/`
 </select>
 </li>
 </ul>
-<br />
-<ul><label>Rating:*</label>
 <div>
-  <li><label>
-    <input type="radio" value="1" v-model="teaTrackingData.Rating" /> ⭐
-  </label></li>
-  <li><label>
-    <input type="radio" value="2" v-model="teaTrackingData.Rating" /> ⭐⭐
-  </label></li>
-  <li><label>
-    <input type="radio" value="3" v-model="teaTrackingData.Rating" /> ⭐⭐⭐
-  </label></li>
-  <li><label>
-    <input type="radio" value="4" v-model="teaTrackingData.Rating" /> ⭐⭐⭐⭐
-  </label></li>
-  <li><label>
-    <input type="radio" value="5" v-model="teaTrackingData.Rating" /> ⭐⭐⭐⭐⭐
-  </label></li>
+<ul ><label class= "inputFields">Rating:*</label>
+<p class=visuallyHidden>Rating Required</p>
+
+  <li class= "inputFields">
+    <input aria-label="1 star" type="radio" value="1" v-model="teaTrackingData.Rating" /> <span aria-hidden=true>⭐</span>
+  </li>
+  <li class= "inputFields">
+    <input aria-label="2 stars" type="radio" value="2" v-model="teaTrackingData.Rating" /> <span aria-hidden=true>⭐⭐</span>
+ </li>
+  <li class= "inputFields">
+    <input aria-label="3 stars" type="radio" value="3" v-model="teaTrackingData.Rating" /> <span aria-hidden=true>⭐⭐⭐</span>
+  </li>
+  <li class= "inputFields">
+    <input aria-label="4 stars" type="radio" value="4" v-model="teaTrackingData.Rating" /> <span aria-hidden=true>⭐⭐⭐⭐</span>
+  </li>
+  <li class= "inputFields">
+    <input aria-label="5 stars" type="radio" value="5" v-model="teaTrackingData.Rating" /> <span aria-hidden=true>⭐⭐⭐⭐⭐</span>
+ </li>
 </ul>
 </div>
 
 
-<br /><br />
-<input type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/>
-<br />
-<button @click="confirm()" class="buttonBig"> Post </button>
+<div><input type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/></div>
+
+<button aria-label="Post Button. Click to post!" @click="confirm()" class="buttonBig"> Post </button>
 
 </div>
 `

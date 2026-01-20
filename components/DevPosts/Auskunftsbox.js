@@ -6,12 +6,12 @@ const htmlTemplate = /*html*/`
 <ul>
   <li v-for="devPost of devPosts" :key="devPost.title">
     <article class=postBox>
-      <h2 id=devPostTitle>{{ devPost.title }}</h2>
+      <h2 id=devPostTitle>DevPost: {{ devPost.title }}</h2>
 
       <Auskunftstext :devPost="devPost" />
       <Auskunftsbild :devPost="devPost"/>
 
-      <div><button :aria-label="'Learn more about ' + devPost.title + 'Currently no link'" class=devPostButton> Learn More</button></div>
+      
     </article>
   </li>
 </ul>
@@ -30,11 +30,11 @@ export default {
           text: "Discover a world of refreshing beverages and hidden gems. Stay tuned for exciting updates and features coming your way!",
           img: "public/resources/Tea.jpg" , alt: "Image displaying a cup of tea", width: "150", height: "100" },
         {
-          title: "Green Tea: Health Benefits", 
-          text: "Green tea is packed with antioxidants and can help improve focus. It supports the immune system and has a calming effect.", 
+          title: "From Leaf to Cup – Why We Built This Tea Platform", 
+          text: "When we started developing this tea website, we didn’t just want to create another online shop. Our goal was to build a place where tea lovers can discover stories, flavors, and the passion behind every leaf", 
           img: "public/resources/D84.jpg" , alt: "Image displaying a dagger", width: "150", height: "100" },
-        { title: "Black Tea: The Perfect Morning Ritual", 
-          text: "Black tea contains caffeine and polyphenols that boost alertness. Perfect to start your day or enjoy a relaxing break.", 
+        { title: "Brewing the Future – What’s Next for Our Tea Website", 
+          text: "In the coming months, we’re working on exciting features: personalized tea recommendations, brewing reminders, and even a small tea community where you can share your favorite blends and rituals.", 
           img: "" , alt: "", width: "", height: "" },
         { title: "Patchnotes v1.2.0", 
           text: "In this update, we have improved performance and fixed several bugs. Enjoy a smoother experience!", 

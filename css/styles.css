@@ -242,3 +242,29 @@ input[type="text"]{
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+#textArea{
+  height: 100px;
+  width: 80%;
+}
+
+
+.country-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.flagge{
+  width: 90px;
+}
+.btnSecondary{
+    background-color: #e57373;
+    opacity: .8;
+    margin-right: 10px;
+}

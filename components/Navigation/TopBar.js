@@ -1,7 +1,8 @@
   import NavMenu from "./NavMenu.js"
   const htmlTemplate = /*html*/`
 <div class="topBarContainer">
-<h1 class="topBar" tabindex="-1" ref="mainFocus">🫖 Quench 🫖</h1>
+  <router-link to="/" aria-label="Home. Click to go to homepage." style="text-decoration:none ">
+<h1 class="topBar" tabindex="-1" ref="mainFocus">🫖 Quench 🫖</h1></router-link>
 <div class="overDiv">
   <div style="display:flex ; align-items:center">
         

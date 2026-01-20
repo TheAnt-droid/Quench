@@ -66,7 +66,7 @@ const htmlTemplate = /*html*/`
 </li>
 </ul>
 
-<div><input type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/></div>
+<div><textarea type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/></div>
 
 <button aria-label="Post Button. Click to post!" @click="confirm()"class="buttonBig"> Post </button>
 

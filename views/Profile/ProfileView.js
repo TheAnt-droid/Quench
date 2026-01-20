@@ -25,7 +25,7 @@ const htmlTemplate = /*html*/`
           
         </div>
         <div>
-          <router-link to="/following">
+          <router-link to="/following" style="text-decoration: none;">
           <div style="font-size: 1.5rem; font-weight: bold; color: #4a7c59;">{{following}}</div>
           <div style="color: #666;">Following</div>
           </router-link>

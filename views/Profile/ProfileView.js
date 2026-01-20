@@ -19,12 +19,16 @@ const htmlTemplate = /*html*/`
     
       <div style="display: flex; gap: 3rem; margin-bottom: 2rem; text-align: center;">
         <div>
+          
           <div style="font-size: 1.5rem; font-weight: bold; color: #4a7c59;">{{posts}}</div>
           <div style="color: #666;">Posts</div>
+          
         </div>
         <div>
+          <router-link to="/following">
           <div style="font-size: 1.5rem; font-weight: bold; color: #4a7c59;">{{following}}</div>
           <div style="color: #666;">Following</div>
+          </router-link>
         </div>
         <div>
           <div style="font-size: 1.5rem; font-weight: bold; color: #4a7c59;">45</div>

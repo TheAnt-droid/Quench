@@ -69,7 +69,7 @@ export default {
     if (storedProfile) {
       this.userInfo = storedProfile;
     }
-    this.following=dataService.get(KEY_FOLLOWED_TRENDING)?.length-5 || 0;
+    this.following=dataService.get(KEY_FOLLOWED_TRENDING)?.length || 0;
     this.posts=dataService.get(KEY_TEA_TRACKING_DATA)?.length || 0;
   }
 };

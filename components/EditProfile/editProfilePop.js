@@ -12,7 +12,7 @@ const htmlTemplate = /*html*/`
     </div>
 
     <div class="form-group">
-      <label for="title">Title</label>
+      <label for="title">Status</label>
       <input type="text" v-model="userInfo.title" id="title" placeholder="Enter your title">
     </div>
 
@@ -22,8 +22,8 @@ const htmlTemplate = /*html*/`
     </div>
 
     <div class="actions">
-      <button class="btn secondary" @click="off()">Cancel</button>
-      <button class="btn primary" @click="saveProfile()">Save</button>
+      <button class="btnPrimary" @click="saveProfile()">Save</button>
+      <button class="btnSecondary" @click="off()">Cancel</button>
     </div>
   </div>
 </div>

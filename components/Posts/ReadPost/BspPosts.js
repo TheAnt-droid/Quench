@@ -10,7 +10,7 @@ const htmlTemplate = /*html*/`
 
 
 <ul >
-   <li v-for="post of trendingPosts" :key="post.id">
+   <li v-for="post of filteredPosts" :key="post.id">
    <div class="postBox"> 
    <h3>{{ post.Title }}</h3>
     
@@ -62,7 +62,7 @@ const htmlTemplate = /*html*/`
 
    
    <button class="devPostButton" @click="toggleFollow(post)">
-      {{ post.isFollowed ? "Unfollow" : "Follow" }}
+      {{ post.isFollowed ? "Forget" : "Remember" }}
     </button>
    </div> 
     
@@ -74,6 +74,9 @@ const htmlTemplate = /*html*/`
 export default {
   template: htmlTemplate,
   components: { },
+  props:{
+    activeFilter: { type: String, required: false, default: "all" }
+  },
   data() {
     return {
       trendingPosts: TRENDING_POSTS.map(p=> ({ ...p, isFollowed: false }))
@@ -89,7 +92,22 @@ export default {
       post.isFollowed = followedIds.includes(post.id);
     });
   },
-
+  computed: {
+  
+    filteredPosts() {
+      if (this.activeFilter === "all") {
+        return this.trendingPosts;
+      }
+    
+      return this.trendingPosts.filter(post => post.PostType === this.activeFilter);
+    }
+  },
+  created() {
+    const followedIds = dataService.get(KEY_FOLLOWED_TRENDING) || [];
+    this.trendingPosts.forEach(post => {
+      post.isFollowed = followedIds.includes(post.id);
+    });
+  },
   methods: {
     toggleFollow(post) {
       post.isFollowed = !post.isFollowed;

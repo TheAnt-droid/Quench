@@ -1,6 +1,4 @@
-import NavBar from "../../components/Navigation/NavBar.js";
-import TopBar from "../../components/Navigation/TopBar.js";
-import NavMenu from "../../components/Navigation/NavMenu.js";
+
 
 import ProductGrid from "../../components/Shop/ProductGrid.js";
 
@@ -9,13 +7,12 @@ const htmlTemplate = /*html*/`
   <main style=" max-width: 1200px; margin: 0 auto;">
     <h2 style="color: #2c5530; margin-bottom: 1.5rem;">Shop: Discover Your Perfect Beverage</h2>
 
-    <!-- Search box -->
     <div style="margin-bottom: 1.5rem;">
       <input 
         type="text" 
         id="searchInput"
         placeholder="search" 
-        style="padding: 10px; width: 300px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 16px;"
+        style="padding: 10px; width: 270px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 16px;"
       >
       <button 
         onclick="
@@ -41,7 +38,6 @@ const htmlTemplate = /*html*/`
       <div id="search-result" style="margin-top: 10px; color: #4a7c59;"></div>
     </div>
 
-    <!-- Filter buttons -->
     <div style="margin-bottom: 2rem; display: flex; gap: 1rem;">
       <button  @click="showAllProd" >Show All</button>
       <button @click="showTea" >Show Tea 🍵</button>
@@ -65,7 +61,7 @@ const htmlTemplate = /*html*/`
 
 export default {
   template: htmlTemplate,
-  components: { ProductGrid , NavBar, TopBar, NavMenu },
+  components: { ProductGrid},
   methods: {
 showAllProd(){
   const cards = document.querySelectorAll('.product-card');

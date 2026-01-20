@@ -69,7 +69,7 @@ const htmlTemplate = /*html*/`
 <p v-if="post.TextArea">
   <strong> Notes: </strong> {{ post.TextArea }}
 </p>
-          <button @click="unfollow(post)">Unfollow</button>
+          <button class="devPostButton" @click="unfollow(post)">Forget</button>
         </li>
       </ul>
       <div v-else>

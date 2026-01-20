@@ -11,9 +11,9 @@ const htmlTemplate = /*html*/`
       </li>
 
       <li>
-        <router-link to="/newPost" >
+        <router-link to="/spilledTea" >
           <span aria-hidden=true>🗒️</span>
-          <span class=visuallyHidden >Create a new Post. Click to open.</span>
+          <span class=visuallyHidden >Spilled Tea - Trending now. Click to open.</span>
         </router-link>
       </li>
 

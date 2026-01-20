@@ -6,7 +6,7 @@ const htmlTemplate = /*html*/`
 <input aria-label="Post Title, Required" type="text" id="title" name="title" placeholder="Post Title..." v-model="teaTrackingData.Title"/>
 
 <h3><label for="textArea"> Whats on your mind? </label></h3>
-<div><input type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/></div>
+<div><textarea type="text" id="textArea" name="text" placeholder="Text Area (Optional)" v-model="teaTrackingData.TextArea"/></div>
 
 <button aria-label="Post Button. Click to post!" @click="confirm()"class="buttonBig"> Post </button>
 

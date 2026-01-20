@@ -1,6 +1,4 @@
-import NavBar from "../../components/Navigation/NavBar.js";
-import TopBar from "../../components/Navigation/TopBar.js";
-import NavMenu from "../../components/Navigation/NavMenu.js";
+
 
 import HiddenGemCard from "../../components/HiddenGems/HiddenGemCard.js";
 import dataService from "../../service/dataService.js";
@@ -9,7 +7,7 @@ const STORAGE_KEY = "quench_hidden_gems";
 
 export default {
   name: "HiddenGemsView",
-  components: { TopBar, NavMenu, NavBar, HiddenGemCard },
+  components: { HiddenGemCard },
 
   data() {
     const loaded = dataService.get(STORAGE_KEY) || [
@@ -17,8 +15,9 @@ export default {
       {
         name: "Small Tea Garden",
         type: "Tea House",
-        country: "Austria",
+        adress: "Kleiner Platz 5",
         city: "Vienna",
+        country: "Austria",
         note: "Quiet place to drink green tea."
       }
     ];
@@ -27,6 +26,7 @@ export default {
       newGem: {
         name: "",
         type: "",
+        adress: "",
         country: "",
         city: "",
         note: ""
@@ -46,15 +46,22 @@ export default {
   },
 
   methods: {
+     removeGem(gemToRemove) {
+    const index = this.gems.indexOf(gemToRemove);
+    if (index !== -1) {
+      this.gems.splice(index, 1);
+      dataService.save(STORAGE_KEY, this.gems);
+    }
+  },
     addGem() {
       if (!this.newGem.name || !this.newGem.country || !this.newGem.city) {
-        // minimaler Check: ohne Name + Ort nichts speichern
         return;
       }
 
       const copy = {
         name: this.newGem.name,
         type: this.newGem.type || "Unknown",
+        adress: this.newGem.adress,
         country: this.newGem.country,
         city: this.newGem.city,
         note: this.newGem.note
@@ -68,6 +75,7 @@ export default {
     clearForm() {
       this.newGem.name = "";
       this.newGem.type = "";
+      this.newGem.adress = "";
       this.newGem.country = "";
       this.newGem.city = "";
       this.newGem.note = "";
@@ -85,7 +93,7 @@ export default {
     <main>
       <h1>Hidden Gems</h1>
 
-      <!-- Formular zum Hinzufügen eines neuen Hidden Gems -->
+
       <section aria-label="Add new hidden gem">
         <h3>Add a new location</h3>
 
@@ -100,26 +108,34 @@ export default {
 
           <div>
             <label for="typeInput">Type of location</label><br>
-            <input id="typeInput"
-                   type="text"
-                   v-model="newGem.type"
-                   placeholder="e.g. Tea House, Cafe, Park">
+            <select id="typeInput"v-model="newGem.type">
+          <option> </option>
+          <option>Tea House</option>
+          <option>Cafe</option>
+          <option>Park</option>
+          <option>Other</option>
+      </select>
           </div>
-
-          <div>
-            <label for="countryInput">Country</label><br>
-            <input id="countryInput"
+<div>
+            <label for="countryInput">Streetname</label><br>
+            <input id="adressInput"
                    type="text"
-                   v-model="newGem.country"
-                   placeholder="Country">
+                   v-model="newGem.adress"
+                   placeholder="Adress">
           </div>
-
           <div>
             <label for="cityInput">City</label><br>
             <input id="cityInput"
                    type="text"
                    v-model="newGem.city"
                    placeholder="City">
+          </div>
+          <div>
+            <label for="countryInput">Country</label><br>
+            <input id="countryInput"
+                   type="text"
+                   v-model="newGem.country"
+                   placeholder="Country">
           </div>
 
           <div>
@@ -137,7 +153,6 @@ export default {
 
       <hr>
 
-      <!-- Filter nach Typ (Mock, sehr einfach) -->
       <section aria-label="Filter hidden gems">
         <h3>Filter by type</h3>
         <button type="button" @click="setFilter('all')">All</button>
@@ -148,7 +163,6 @@ export default {
 
       <hr>
 
-      <!-- Liste der gespeicherten Hidden Gems -->
       <section aria-label="Saved hidden gems" aria-live="polite">
         <h3>My hidden gems</h3>
 
@@ -158,9 +172,13 @@ export default {
 
         <ul v-else>
           <li v-for="(gem, index) in filteredGems" :key="index">
+            <div class="postBox">
             <HiddenGemCard :gem="gem" />
+            <button class="devPostButton" @click="removeGem(gem)">Remove</button>
+            </div>
           </li>
         </ul>
+
       </section>
 
       
